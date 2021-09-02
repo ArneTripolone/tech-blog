@@ -1,0 +1,12 @@
+<h1> Homepage </h1>
+
+{{#if logged_in}}
+    <nav>
+        <button class="btn" id="logout">logout</button>
+    </nav>
+{{else}}
+    <nav>
+    <a class="btn" href="/login" id="login">login</a>
+    <a class="btn" href="/signup" id="signup">signup</a>
+    </nav>
+{{/if}}
