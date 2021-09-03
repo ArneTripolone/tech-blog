@@ -1,7 +1,7 @@
 {
   "name": "crowd-funding",
   "version": "1.0.0",
-  "description": "A skeleton for project two, using express, sequelize, handlebars, nodeJs",
+  "description": "tech blog",
   "main": "server.js",
   "scripts": {
     "test": "jest --coverage",
@@ -32,10 +32,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Fonyx/budget-smuggler.git"
+    "url": "git+https://github.com/ArneTripolone/tech-blog.git"
   },
   "bugs": {
-    "url": "https://github.com/Fonyx/budget-smuggler/issues"
+    "url": "https://github.com/ArneTripolone/tech-blog/issues"
   },
-  "homepage": "https://github.com/Fonyx/budget-smuggler#readme"
+  "homepage": "https://github.com/ArneTripolone/tech-blog#readme"
 }
