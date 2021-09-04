@@ -5,13 +5,9 @@ const {onlyIfLoggedIn} = require('../middleware/auth');
 // Dashboard route get request
 router.get('/blogpost', async (req, res) => {
   try{
-    if (req.session.logged_in){
-      res.redirect('/profile');
-      return;
-    } else {
       res.render('dashboard');
     }
-  } catch(err){
+  catch(err){
     res.status(500).json(err);
   }
 });
