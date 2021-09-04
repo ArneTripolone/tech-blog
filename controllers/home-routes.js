@@ -2,7 +2,20 @@ const { User, Transaction, Category } = require('../models');
 const router = require('express').Router();
 const {onlyIfLoggedIn} = require('../middleware/auth');
 
-// home route get request
+// Dashboard route get request
+router.get('/blogpost', async (req, res) => {
+  try{
+    if (req.session.logged_in){
+      res.redirect('/profile');
+      return;
+    } else {
+      res.render('dashboard');
+    }
+  } catch(err){
+    res.status(500).json(err);
+  }
+});
+
 router.get('/', async (req, res) => {
   try {
     // Pass serialized data into Handlebars.js template
