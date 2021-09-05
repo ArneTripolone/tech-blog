@@ -22,6 +22,9 @@ let fillData = () => {
 }
 */
 
+const blogFormHandler = async (event) => {
+    event.preventDefault();
+
 var submit = document.getElementById("blogsubmit");
 
 submit.onclick = function () {
@@ -47,3 +50,6 @@ fetch('/api/user/blogpost', {
 .then(function (blog) {
   console.log('got results', blog)
 })
+}
+
+document.querySelector('#blogsubmit').addEventListener('click', blogFormHandler);
