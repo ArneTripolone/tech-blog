@@ -29,5 +29,5 @@ const loginFormHandler = async (event) => {
 
 // attach the login handler to the login button
 document
-.querySelector('.login-form')
+.querySelector('blogpost')
 .addEventListener('submit', loginFormHandler);
