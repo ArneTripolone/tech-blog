@@ -13,6 +13,15 @@ router.get('/blogpost', async (req, res) => {
   }
 });
 
+router.get('/newpost', async (req, res) => {
+  try{
+      res.render('newpost');
+    }
+  catch(err){
+    res.status(500).json(err);
+  }
+});
+
 router.get('/', async (req, res) => {
   try {
     // Pass serialized data into Handlebars.js template

@@ -1,3 +1,20 @@
+
+//Credit to: https://www.learnwithjason.dev/blog/get-form-values-as-json !
+
+function handleSubmit(event) {
+  event.preventDefault();
+
+  const data = new FormData(event.target);
+
+  const value = Object.fromEntries(data.entries());
+
+  console.log({ value });
+}
+
+const form = document.querySelector('form');
+form.addEventListener('submit', handleSubmit);
+
+
 /*
 const blogFormHandler = async (event) => {
     event.preventDefault();
@@ -11,14 +28,14 @@ submit.onclick = function () {
     console.log(title, content);
 };
 
-fetch('/api/user/blogpost', {
+fetch('/api/user/newpost', {
   method: 'POST',
   headers: {
     'content-type': 'application/json'
   },
   body: JSON.stringify({
     title,
-    content,
+    content
   })
 })
 .then(function (blog) {
