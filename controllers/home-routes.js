@@ -2,6 +2,7 @@ const { User, Transaction, Category } = require('../models');
 const router = require('express').Router();
 const {onlyIfLoggedIn} = require('../middleware/auth');
 
+
 // Dashboard route get request
 router.get('/blogpost', async (req, res) => {
   try{

@@ -1,6 +1,7 @@
 const User = require('./User');
 const Category = require('./Category');
 const Transaction = require('./Transaction');
+const Blogposts = require('./Blogposts');
 
 User.hasMany(Transaction, {
     foreignKey: 'user_id',
@@ -24,4 +25,4 @@ Category.hasMany(Transaction, {
     onDelete: 'CASCADE',
 });
 
-module.exports = { User, Category, Transaction };
+module.exports = { User, Category, Transaction, Blogposts };
