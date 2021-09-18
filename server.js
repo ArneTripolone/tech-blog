@@ -1,5 +1,6 @@
 const path = require('path');
 const express = require('express');
+const bodyParser = require('body-parser');
 const session = require('express-session');
 const controllers = require('./controllers');
 const exphbs = require('express-handlebars');
@@ -12,6 +13,12 @@ const hbs = exphbs.create({ hjsHelpers });
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+const fs = require('fs');
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
 
 const sess = {
   secret: 'Super secret secret',

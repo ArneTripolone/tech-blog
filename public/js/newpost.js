@@ -1,6 +1,44 @@
+const appDiv = document.getElementById('app');
+appDiv.innerHTML = `
+  <div class="app">
+    <form name="fetch">
+      <input type="text" name="title" placeholder="title"><br>
+      <input type="text" name="content" placeholder="content">
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+`;
 
+// selectors
+const app = document.querySelector('.app');
+const form = document.forms.fetch;
+
+const postForm = body => {
+  return fetch('//httpbin.org/post', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body
+  });
+};
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  const body = JSON.stringify(Object.fromEntries(new FormData(e.target)));
+
+  const res = await postForm(body);
+  const data = await res.json();
+
+  console.log(data.json);
+};
+
+form.addEventListener('submit', handleSubmit);
+
+
+
+/*
 //Credit to: https://www.learnwithjason.dev/blog/get-form-values-as-json !
-
 function handleSubmit(event) {
   event.preventDefault();
 
@@ -15,9 +53,8 @@ const form = document.querySelector('form');
 form.addEventListener('submit', handleSubmit);
 
 
-/*
 fetch("/newpost", {
-  method: "POST",
+  method: "GET",
   body: JSON.stringify({
   }),
   headers: { "Content-Type": "application/json" }
@@ -27,10 +64,6 @@ fetch("/newpost", {
   })
   .catch(err => console.log(err));
 */
-
-
-
-
 /*
 const blogFormHandler = async (event) => {
     event.preventDefault();
