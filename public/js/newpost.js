@@ -1,3 +1,5 @@
+//Credit to: https://ultimatecourses.com/blog/fetch-api-post-json
+
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = `
   <div class="app">
