@@ -16,6 +16,22 @@ form.addEventListener('submit', handleSubmit);
 
 
 /*
+fetch("/newpost", {
+  method: "POST",
+  body: JSON.stringify({
+  }),
+  headers: { "Content-Type": "application/json" }
+})
+  .then(function(res) {
+    console.log(res);
+  })
+  .catch(err => console.log(err));
+*/
+
+
+
+
+/*
 const blogFormHandler = async (event) => {
     event.preventDefault();
 
@@ -47,4 +63,32 @@ fetch('/api/user/newpost', {
 }
 
 document.querySelector('#blogsubmit').addEventListener('submit', blogFormHandler);
+*/
+
+//AskBCS option below:
+/*
+fetch("/api/user/newpost", {
+  method: "GET",
+  body: JSON.stringify({
+    data
+  }),
+  headers: { "Content-Type": "application/json" }
+})
+  .then(function(res) {
+    console.log(res);
+  })
+  .catch(err => console.log(err));
+;
+*/
+
+//Web Dev Simplified Ideas: https://www.youtube.com/watch?v=cuEtnrL9-H0&t=260s
+/*
+fetch('/newpost', {
+  method: 'POST',
+  body: {
+    _
+  }
+}).then(res => {
+  res.json()
+})
 */
