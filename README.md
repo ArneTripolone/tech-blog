@@ -2,7 +2,7 @@
 
 ## Description
 
-This repo contains a tech blog. Users can login with one of three users in the database after seeding. The app is deployed live here: https://mighty-dusk-22530.herokuapp.com/. It is unfinished, still requiring rendering of JSON data to the dashboard and aesthetic improvements.
+This repo contains a tech blog. Users can login with one of three users in the database after seeding. The app is deployed live here: https://mighty-dusk-22530.herokuapp.com/. This app requires further work to render JSON data to the dashboard and aesthetic improvements.
 
 ## Screenshots
 Home Page
